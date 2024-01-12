@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exe005</title>
+    <style>
+        body{
+            background-color: aqua;
+            color: white;
+            font-size: x-large;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+ <h1 id="seletor">Iniciando estudos em DOM</h1>
+ <P name="nome">Aqui vai o resuldado.</P>
+ <p class="classe">Apredendo a usar o <strong>DOM</strong> em javascript.</p>
+ <div id="msg">Clique em mim</div>
+    <script>
+        // tag
+        var p1 = window.document.getElementsByTagName('p')[0]
+        p1.style.color = 'Black'
+        // classe
+        var d0 = window.document.getElementsByClassName('classe')[0]
+        d0.style.color = 'blue'
+        // name
+        var p2 = window.document.getElementsByName('nome')[0]
+        p2.style.textAlign = 'center'
+        //id 
+        var d = window.document.getElementById('msg').innerText ='Estou aprendendo:)'
+        //seletor
+        var d2 = window.document.querySelector('h1#seletor')
+        d2.style.textAlign = 'center'
+    </script>
+</body>
+</html>

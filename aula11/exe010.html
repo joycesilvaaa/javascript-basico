@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exe10</title>
+</head>
+<body>
+    <h1>Sistemas de multa</h1>
+    Velocidade do carro:
+    <input type="number" name="velocidade" id="velocidade">
+    <input type="button" value="verificar" onclick="calcular()">
+    <div id="res">
+
+    </div>
+    <script>
+        function calcular(){
+        var vel_user = Number(document.getElementById('velocidade').value)
+        var resultado = document.getElementById('res')
+        resultado.innerHTML = `<p> A velocidade do seu carro é de <strong>${vel_user} km/h</strong>.</p> <br>`
+        if (vel_user > 60){
+            resultado.innerText += `Você será MULTADO por execesso de velocidade.`
+        } 
+        resultado.innerText += `Respeite a sinalização e dirija com cuidado!`
+        }
+        
+    </script>
+</body>
+</html>

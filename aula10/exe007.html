@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exe007</title>
+    <style>
+        body{ 
+            display: flex;
+            flex-direction: column; 
+            align-items: center;
+            font-size: x-large;
+
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: aqua;
+            color: blue;
+        }
+        input{
+            display: flex;
+            margin: 1%;
+            border: none;
+            border-radius: 10px;
+            padding: 2%;
+            font-size: large;
+        }
+        #botao{
+            background-color: blue;
+            font-size: 90%;
+            color: white;
+            border-radius: 10px;
+        }
+        #resposta{
+            margin: 2%;
+            font-size: 110%;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <input type="number" name="txtn1" id="txtn1">
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="Somar" onclick="somar()" id="botao">
+    <div id="resposta">
+        Calculando...
+    </div>
+    <script>
+        function somar(){
+            var n1 = Number(document.getElementById('txtn1').value)
+            var n2 = Number(document.getElementById('txtn2').value)
+            var calculo = n1 + n2
+            var resposta = document.getElementById('resposta').innerText = `A soma entre ${n1} e ${n2} é ${calculo}.`
+        }
+    </script>
+</body>
+</html>

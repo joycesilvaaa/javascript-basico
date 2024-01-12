@@ -1,0 +1,180 @@
+Javascript - Anotações
+
+Para declarar uma variavel, podemos utilizar var ou o let. O var, é para uma variavel global, já o let é utilizando dentro de um bloco.
+Em javascript podemos utilizar 3 tipos de aspas ('',"",``) cada uma tem uma diferença.
+ - '' ou "" para strings simples
+ - `` para template string (placeholder)
+
+Identificadores Regras Para Nomes:
+ Importante criar nomes para variaveis que façam sentido.
+ - Deve começar com letras, $ ou _ 
+ - Não pode começar com numeros
+ - Pode criar uma variavel utilizando numeros e letras (desde que que respeite as regras acima)
+ - Pode utilizar acentos e simbolos
+ - Não pode utilizar palavras reservadas e não pode contem espaços entre as palavras
+
+Tipos primitivos primordiais:
+ - boolean (true / false)
+ - string (letras, pontos e etc)
+ - numers (numeros)
+   - infinity
+   - NaN
+ - null (nulo)
+ - undefined
+ - object
+   - array
+ - function
+
+No javascript, não tem a diferenciação de float ou int, todos são do tipo numero.
+
+Usamos typeof para saber o tipo.
+
+Para concatenar strings, usamos o +.
+
+Para conversão de numeros:
+ - Number()
+ - Number.parseInt()
+ - Number.parseFloat()
+
+Para converter para string:
+ - String()
+
+Para template strings:
+ - ` ${variavel aqui} `
+ ${} -> se chama placeholder
+
+Para saber o tamanho da string:
+.length
+
+Para letras Maiúscula:
+.toUpperCase()
+
+Para letras Minusculas:
+.toLowerCase()
+
+Para formatação de numeros: 
+.toFixed() // pode arrendodar ou fixar os valores depois da virgula
+ ex: var n1 = 1545.5
+     n1.toFixed(2)
+     '1545.50'
+.replace('', '') // muda o que deseja mudar
+ ex: n1.toFixed(2).replace('.', ',')
+     '1545,50'
+.toLocaleString() // mostra o valor monetario
+ ex: n1.toLocaleString('pt-BR', {style: 'currency', currency : 'BRL'})
+     'R$ 1.545,50'
+
+Operadores:
+ - aritmetico ( + , - , * , / , % (resto da divisão inteira), ** )
+ - atribuição 
+ - relacionais
+ - lógicos
+ - ternário
+
+Order de precedencia para operações aritmeticas:
+ - 1° ()
+ - 2° **
+ - 3° * / %
+ - 4° + - 
+
+Operadores relacionais:
+ - > (maior)
+ - < (menor)
+ - >= (maior igual)
+ - <= (menor igual)
+ - == (igual)
+ - != (diferente)
+ - === (igualdade de tipo e valor)
+
+** O valor de igualdade no javascript, não testa o tipo do valor e sim o valor dado. ex : 5 == '5' (true)  **
+
+Operadores Lógicos:
+ - ! (Negação)
+ - && (conjunção)
+   Uma coisa e outra
+ - || (disjunção) 
+   Uma coisa ou outra
+
+Quando temos os tres operadores em uma expressão, exite uma ordem que é:
+ - 1° Aritmetico
+ - 2° Relacional
+ - 3° Logico
+
+Operador ternário:
+ É composto por dois simbolos, é dividido em 3 partes:
+
+ |teste| ? |true| : |false|
+ ex: 
+ |media > 7| ? |'APROVADO'| : |'REPROVADO'|
+ 
+DOM - Document Object Model
+Permite que os script façam a manipulação dos elementos, estilo e o conteudo desses documentos de uma maneira dinamica.
+
+Metodos para selecionar elementos:
+ - Marca (getElementsByTagName()) 
+ - ID (getElementBYid())
+ - Nome (getElementsByName())
+ - Classe (getElementsByClassName())
+ - Seletor (querySelector() ou querySelectorAll())
+
+Eventos DOM
+Coisas que podemos fazer com uma div.
+
+Funções:
+Existe funções anonimas no javascript, mas normalmete usamos funções que tem o nome do evento que ela vai fazer.
+ - {} (bloco)
+ - function {} (anonima)
+ - function nome(parametro){} (de ação)
+Fuções são ações executadas assim que são chamadas ou em decorrência de algum evento. Pode receber parâmetros e retornar um resultado.
+ - function (param) {return }
+
+Condições:
+ - Simples: Tem apenas o if
+ - Compostas: Tem if e o else
+ - Aninhadas : Tem else, if e else if.
+ - Multipla : Usado para execuções especficas.(switch)
+ Legenda:
+ - if () {} (se)
+ - else if () {} (senao se)
+ - else {} (senão)
+ - switch () { (expressão)
+   	case :
+    	 break
+  	default:
+         break
+}
+
+Repetições:
+ Teste lógico no inicio:
+ - while () {} (enquanto) 
+ Teste lógico no final :
+ - do {} while()
+ Usando o for:
+ - for (inicio; teste; incremento) {}
+ - for (let nome_da_variavel in nome_da_variavel){}
+
+Variaveis Compostas (arrays):
+Vetor é uma variavel com varios espaços (é uma lista).
+ - array = vetor 
+ - indice = chave
+ - conteudo = valor
+ - elemento = armazena o valor e chave de indenficação
+ Escrevemos dessa forma:
+ - var nome_da_variavel = []
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
